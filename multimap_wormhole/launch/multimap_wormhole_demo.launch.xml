@@ -1,0 +1,12 @@
+<launch>
+
+    <include file="$(find-pkg-share multimap_wormhole)/launch/navigation2.launch.py">
+        <arg name="use_sim_time" value="True" />
+        <arg name="map" value="$(find-pkg-share multimap_wormhole)/maps/hall.yaml" />
+    </include>
+
+    <node pkg="multimap_wormhole" exec="multi_room_navigator" output="screen" />
+
+    <node pkg="multimap_wormhole" exec="initial_pose_publisher" output="screen" />
+
+</launch>
