@@ -1,0 +1,14 @@
+<launch>
+
+    <!-- Joystick Teleoperation -->
+    <include file="$(find-pkg-share teleop_twist_joy)/launch/teleop-launch.py" />
+
+     <!-- SLAM tool -->
+    <include file="$(find-pkg-share slam_toolbox)/launch/online_async_launch.py" />
+
+     <!-- WormHole Creator -->
+    <node pkg="multimap_wormhole" exec="multi_room_navigator" output="screen" />
+
+
+
+</launch>
